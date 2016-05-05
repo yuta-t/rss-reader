@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ArticleListViewController: UIViewController {
-
+class ArticleListViewController: UIViewController, UITableViewDelegate {
+    let mv = ArticleListViewModel()
+    
     override func loadView() {
         super.loadView()
         view = ArticleListView()
@@ -17,6 +18,8 @@ class ArticleListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let articleListView = view as! ArticleListView
+        articleListView.table.delegate = self
+        articleListView.table.dataSource = mv
     }
 }
