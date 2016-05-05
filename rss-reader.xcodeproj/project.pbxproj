@@ -14,6 +14,8 @@
 		012D2B221CDB114600B44FA6 /* rss_readerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D2B211CDB114600B44FA6 /* rss_readerUITests.swift */; };
 		012D2B301CDB14DC00B44FA6 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D2B2F1CDB14DC00B44FA6 /* ArticleListViewController.swift */; };
 		012D2B351CDB155D00B44FA6 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D2B341CDB155D00B44FA6 /* ArticleListView.swift */; };
+		012D2B381CDB26AE00B44FA6 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D2B371CDB26AE00B44FA6 /* Article.swift */; };
+		012D2B3A1CDB270900B44FA6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012D2B391CDB270900B44FA6 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		012D2B231CDB114600B44FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012D2B2F1CDB14DC00B44FA6 /* ArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		012D2B341CDB155D00B44FA6 /* ArticleListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
+		012D2B371CDB26AE00B44FA6 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		012D2B391CDB270900B44FA6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012D2B3A1CDB270900B44FA6 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				012D2B001CDB114600B44FA6 /* rss-reader */,
+				012D2B3C1CDB289100B44FA6 /* Frameworks */,
 				012D2B151CDB114600B44FA6 /* rss-readerTests */,
 				012D2B201CDB114600B44FA6 /* rss-readerUITests */,
 				012D2AFF1CDB114600B44FA6 /* Products */,
@@ -99,6 +105,7 @@
 			children = (
 				012D2B321CDB14FF00B44FA6 /* Application */,
 				012D2B311CDB14F400B44FA6 /* Scenes */,
+				012D2B361CDB268A00B44FA6 /* Models */,
 			);
 			path = "rss-reader";
 			sourceTree = "<group>";
@@ -149,6 +156,22 @@
 			name = ArticleList;
 			sourceTree = "<group>";
 		};
+		012D2B361CDB268A00B44FA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				012D2B371CDB26AE00B44FA6 /* Article.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		012D2B3C1CDB289100B44FA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				012D2B391CDB270900B44FA6 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,6 +182,7 @@
 				012D2AFA1CDB114600B44FA6 /* Sources */,
 				012D2AFB1CDB114600B44FA6 /* Frameworks */,
 				012D2AFC1CDB114600B44FA6 /* Resources */,
+				012D2B3B1CDB271200B44FA6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -274,11 +298,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		012D2B3B1CDB271200B44FA6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		012D2AFA1CDB114600B44FA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012D2B381CDB26AE00B44FA6 /* Article.swift in Sources */,
 				012D2B021CDB114600B44FA6 /* AppDelegate.swift in Sources */,
 				012D2B351CDB155D00B44FA6 /* ArticleListView.swift in Sources */,
 				012D2B301CDB14DC00B44FA6 /* ArticleListViewController.swift in Sources */,
@@ -417,6 +459,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "rss-reader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.yuta-t.rss-reader";
@@ -428,6 +474,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "rss-reader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.yuta-t.rss-reader";
@@ -500,6 +550,7 @@
 				012D2B281CDB114600B44FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		012D2B291CDB114600B44FA6 /* Build configuration list for PBXNativeTarget "rss-readerTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +559,7 @@
 				012D2B2B1CDB114600B44FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		012D2B2C1CDB114600B44FA6 /* Build configuration list for PBXNativeTarget "rss-readerUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +568,7 @@
 				012D2B2E1CDB114600B44FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
