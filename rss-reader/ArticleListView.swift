@@ -12,7 +12,7 @@ class ArticleListView: UIView {
     var table: UITableView
     var refreshControl: UIRefreshControl
     
-    override init(frame: CGRect) {
+    init() {
         table = UITableView()
         refreshControl = UIRefreshControl()
         
