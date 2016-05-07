@@ -18,6 +18,8 @@
 		012D2B3F1CDB308D00B44FA6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012D2B391CDB270900B44FA6 /* Alamofire.framework */; };
 		012D2B401CDB309100B44FA6 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012D2B3D1CDB2F4E00B44FA6 /* Fuzi.framework */; };
 		012D2B411CDB309100B44FA6 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 012D2B3D1CDB2F4E00B44FA6 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		012D2B441CDB396B00B44FA6 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D2B431CDB396B00B44FA6 /* ArticleListViewModel.swift */; };
+		0173DF8D1CDDB0E000C5A584 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0173DF8C1CDDB0E000C5A584 /* Bond.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		012D2B371CDB26AE00B44FA6 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		012D2B391CDB270900B44FA6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		012D2B3D1CDB2F4E00B44FA6 /* Fuzi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fuzi.framework; path = Carthage/Build/iOS/Fuzi.framework; sourceTree = "<group>"; };
+		012D2B431CDB396B00B44FA6 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
+		0173DF8C1CDDB0E000C5A584 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0173DF8D1CDDB0E000C5A584 /* Bond.framework in Frameworks */,
 				012D2B401CDB309100B44FA6 /* Fuzi.framework in Frameworks */,
 				012D2B3F1CDB308D00B44FA6 /* Alamofire.framework in Frameworks */,
 			);
@@ -170,6 +175,7 @@
 			children = (
 				012D2B2F1CDB14DC00B44FA6 /* ArticleListViewController.swift */,
 				012D2B341CDB155D00B44FA6 /* ArticleListView.swift */,
+				012D2B431CDB396B00B44FA6 /* ArticleListViewModel.swift */,
 			);
 			name = ArticleList;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 		012D2B3C1CDB289100B44FA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0173DF8C1CDDB0E000C5A584 /* Bond.framework */,
 				012D2B3D1CDB2F4E00B44FA6 /* Fuzi.framework */,
 				012D2B391CDB270900B44FA6 /* Alamofire.framework */,
 			);
@@ -326,6 +333,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Bond.framework",
 			);
 			outputPaths = (
 			);
@@ -344,6 +352,7 @@
 				012D2B021CDB114600B44FA6 /* AppDelegate.swift in Sources */,
 				012D2B351CDB155D00B44FA6 /* ArticleListView.swift in Sources */,
 				012D2B301CDB14DC00B44FA6 /* ArticleListViewController.swift in Sources */,
+				012D2B441CDB396B00B44FA6 /* ArticleListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -495,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
