@@ -7,20 +7,13 @@
 //
 
 import UIKit
+import Bond
 
-class ArticleListViewModel: NSObject, UITableViewDataSource {
-    let articles: [Article] = []
-    
+class ArticleListViewModel: NSObject {
+    var articles: ObservableArray<ObservableArray<Article>> = []
+
     func loadArticles() {
-        
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articles.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
-        return cell
+        let jinArticles = Article.getFromJin()
+        articles.append(jinArticles)
     }
 }
