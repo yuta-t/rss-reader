@@ -20,6 +20,7 @@
 		012D2B411CDB309100B44FA6 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 012D2B3D1CDB2F4E00B44FA6 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		012D2B441CDB396B00B44FA6 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D2B431CDB396B00B44FA6 /* ArticleListViewModel.swift */; };
 		0173DF8D1CDDB0E000C5A584 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0173DF8C1CDDB0E000C5A584 /* Bond.framework */; };
+		0173DF931CDDEB9700C5A584 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173DF921CDDEB9700C5A584 /* NSDate+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		012D2B3D1CDB2F4E00B44FA6 /* Fuzi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fuzi.framework; path = Carthage/Build/iOS/Fuzi.framework; sourceTree = "<group>"; };
 		012D2B431CDB396B00B44FA6 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		0173DF8C1CDDB0E000C5A584 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
+		0173DF921CDDEB9700C5A584 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				012D2B321CDB14FF00B44FA6 /* Application */,
 				012D2B311CDB14F400B44FA6 /* Scenes */,
 				012D2B361CDB268A00B44FA6 /* Models */,
+				0173DF8E1CDDEB3600C5A584 /* Extensions */,
 			);
 			path = "rss-reader";
 			sourceTree = "<group>";
@@ -196,6 +199,14 @@
 				012D2B391CDB270900B44FA6 /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0173DF8E1CDDEB3600C5A584 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0173DF921CDDEB9700C5A584 /* NSDate+Extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0173DF931CDDEB9700C5A584 /* NSDate+Extension.swift in Sources */,
 				012D2B381CDB26AE00B44FA6 /* Article.swift in Sources */,
 				012D2B021CDB114600B44FA6 /* AppDelegate.swift in Sources */,
 				012D2B351CDB155D00B44FA6 /* ArticleListView.swift in Sources */,
