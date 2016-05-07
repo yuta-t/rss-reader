@@ -10,12 +10,15 @@ import UIKit
 
 class ArticleListView: UIView {
     var table: UITableView
+    var refreshControl: UIRefreshControl
     
     override init(frame: CGRect) {
         table = UITableView()
+        refreshControl = UIRefreshControl()
         
         super.init(frame: CGRectZero)
         addSubview(table)
+        table.addSubview(refreshControl)
     }
     
     required init?(coder aDecoder: NSCoder) {
