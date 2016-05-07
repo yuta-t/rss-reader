@@ -13,7 +13,6 @@ class ArticleListViewModel: NSObject {
     var articles: ObservableArray<ObservableArray<Article>> = []
 
     func loadArticles() {
-        let jinArticles = Article.getFromJin()
-        articles.append(jinArticles)
+        articles.append(Article.getFromJin())
     }
 }
