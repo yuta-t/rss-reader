@@ -1,2 +1,4 @@
 github "Alamofire/Alamofire" ~> 3.3
 github "cezheng/Fuzi" ~> 0.3.0
+github "SwiftBond/Bond" ~> 4.0
+
