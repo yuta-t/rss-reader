@@ -21,6 +21,9 @@
 		012D2B441CDB396B00B44FA6 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D2B431CDB396B00B44FA6 /* ArticleListViewModel.swift */; };
 		0173DF8D1CDDB0E000C5A584 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0173DF8C1CDDB0E000C5A584 /* Bond.framework */; };
 		0173DF931CDDEB9700C5A584 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173DF921CDDEB9700C5A584 /* NSDate+Extension.swift */; };
+		0173DF9C1CDDFB3B00C5A584 /* SingleArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173DF9B1CDDFB3B00C5A584 /* SingleArticleViewController.swift */; };
+		0173DF9E1CDDFB4800C5A584 /* SingleArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173DF9D1CDDFB4800C5A584 /* SingleArticleView.swift */; };
+		0173DFA01CDE089A00C5A584 /* SingleArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173DF9F1CDE089A00C5A584 /* SingleArticleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		012D2B431CDB396B00B44FA6 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		0173DF8C1CDDB0E000C5A584 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
 		0173DF921CDDEB9700C5A584 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		0173DF9B1CDDFB3B00C5A584 /* SingleArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleArticleViewController.swift; sourceTree = "<group>"; };
+		0173DF9D1CDDFB4800C5A584 /* SingleArticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleArticleView.swift; sourceTree = "<group>"; };
+		0173DF9F1CDE089A00C5A584 /* SingleArticleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleArticleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				012D2B331CDB151C00B44FA6 /* ArticleList */,
+				0173DF9A1CDDFB2200C5A584 /* SingleArticle */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -207,6 +214,16 @@
 				0173DF921CDDEB9700C5A584 /* NSDate+Extension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0173DF9A1CDDFB2200C5A584 /* SingleArticle */ = {
+			isa = PBXGroup;
+			children = (
+				0173DF9B1CDDFB3B00C5A584 /* SingleArticleViewController.swift */,
+				0173DF9D1CDDFB4800C5A584 /* SingleArticleView.swift */,
+				0173DF9F1CDE089A00C5A584 /* SingleArticleViewModel.swift */,
+			);
+			name = SingleArticle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,8 +379,11 @@
 				0173DF931CDDEB9700C5A584 /* NSDate+Extension.swift in Sources */,
 				012D2B381CDB26AE00B44FA6 /* Article.swift in Sources */,
 				012D2B021CDB114600B44FA6 /* AppDelegate.swift in Sources */,
+				0173DF9E1CDDFB4800C5A584 /* SingleArticleView.swift in Sources */,
 				012D2B351CDB155D00B44FA6 /* ArticleListView.swift in Sources */,
+				0173DF9C1CDDFB3B00C5A584 /* SingleArticleViewController.swift in Sources */,
 				012D2B301CDB14DC00B44FA6 /* ArticleListViewController.swift in Sources */,
+				0173DFA01CDE089A00C5A584 /* SingleArticleViewModel.swift in Sources */,
 				012D2B441CDB396B00B44FA6 /* ArticleListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
