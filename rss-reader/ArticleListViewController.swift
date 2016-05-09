@@ -8,6 +8,7 @@
 
 import UIKit
 import Bond
+import Kingfisher
 
 class ArticleListViewController: UIViewController, UITableViewDelegate {
     let vm = ArticleListViewModel()
@@ -24,10 +25,13 @@ class ArticleListViewController: UIViewController, UITableViewDelegate {
         view.table.delegate = self
      
         vm.articles.bindTo(view.table, proxyDataSource: vm.proxy) { (indexPath, data, table) -> UITableViewCell in
-            let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "cell")
+            let cell = table.dequeueReusableCellWithIdentifier("ArticleListTableViewCell") as! ArticleListTableViewCell
             let article = data[indexPath.section][indexPath.row]
-            cell.textLabel?.text = article.title
-            cell.detailTextLabel?.text = article.datetime
+            
+            cell.title.text = article.title
+            cell.date.text = article.date
+            
+            cell.img.kf_setImageWithURL(NSURL(string: article.imageURL)!)
             return cell
         }
         
@@ -52,9 +56,15 @@ class ArticleListViewController: UIViewController, UITableViewDelegate {
         }
     }
     
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.navigationController?.pushViewController(
             SingleArticleViewController(article: vm.articles[indexPath.section][indexPath.row]),
             animated: true)
     }
+    
 }
