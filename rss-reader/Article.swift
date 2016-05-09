@@ -14,7 +14,8 @@ import Bond
 struct Article {
     let title: String
     let url: String
-    let datetime: String
+    let date: String
+    let imageURL: String
     
     static func getFromJin() -> ObservableArray<Article> {
         let url = "http://jin115.com/index.rdf"
@@ -31,14 +32,30 @@ struct Article {
             for item in root.children(tag: "item") {
                 guard let title = item.firstChild(tag: "title"),
                     url = item.firstChild(tag: "link"),
-                    datetime = item.firstChild(css: "dc:date") else { return }
+                    date = item.firstChild(css: "dc:date"),
+                    imageURL = item.getImageFromJin() else { continue }
                 
                 let article = Article(title: title.stringValue,
                     url: url.stringValue,
-                    datetime: NSDate.convert(datetime.stringValue))
+                    date: NSDate.convert(date.stringValue),
+                    imageURL: imageURL)
                 articles.append(article)
             }
         }
         return articles
+    }
+}
+
+extension XMLElement {
+    func getImageFromJin() -> String? {
+        guard let content = self.firstChild(css: "content:encoded") else {
+            return nil
+        }
+        
+        let html = try? HTMLDocument(string: content.stringValue, encoding: NSUTF8StringEncoding)
+        
+        print(html?.firstChild(xpath: "//body/div/img")?.attr("src"))
+        
+        return html?.firstChild(xpath: "//body/div/img")?.attr("src")
     }
 }
