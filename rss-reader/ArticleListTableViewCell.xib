@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ArticleListTableViewCell" customModule="rss_reader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZRK-pE-9k0">
+                        <rect key="frame" x="10" y="10" width="300" height="60"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hzi-Pr-i8Y">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="j2t-AI-mq3"/>
+                                    <constraint firstAttribute="height" constant="60" id="rzE-gS-iKy"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GaB-tk-zoe">
+                                <rect key="frame" x="65" y="0.0" width="235" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReX-OS-gvL">
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="43"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFZ-Vy-He7">
+                                        <rect key="frame" x="0.0" y="43" width="235" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="Tsu-8E-vID"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lFZ-Vy-He7" secondAttribute="trailing" id="7ES-a6-uH4"/>
+                                    <constraint firstItem="ReX-OS-gvL" firstAttribute="top" secondItem="GaB-tk-zoe" secondAttribute="top" id="FdG-Sk-PyA"/>
+                                    <constraint firstItem="lFZ-Vy-He7" firstAttribute="top" secondItem="ReX-OS-gvL" secondAttribute="bottom" id="QSH-Xf-QlN"/>
+                                    <constraint firstItem="lFZ-Vy-He7" firstAttribute="leading" secondItem="GaB-tk-zoe" secondAttribute="leading" id="ebH-TE-Agy"/>
+                                    <constraint firstItem="lFZ-Vy-He7" firstAttribute="top" secondItem="ReX-OS-gvL" secondAttribute="bottom" id="jSH-Gx-JZW"/>
+                                    <constraint firstAttribute="bottom" secondItem="lFZ-Vy-He7" secondAttribute="bottom" id="nXw-nu-dmO"/>
+                                    <constraint firstItem="ReX-OS-gvL" firstAttribute="leading" secondItem="GaB-tk-zoe" secondAttribute="leading" id="tbO-kj-5pV"/>
+                                    <constraint firstAttribute="trailing" secondItem="ReX-OS-gvL" secondAttribute="trailing" id="uhE-lx-Hah"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QSH-Xf-QlN"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="GaB-tk-zoe" firstAttribute="top" secondItem="ZRK-pE-9k0" secondAttribute="top" id="16T-Fe-hGt"/>
+                            <constraint firstAttribute="trailing" secondItem="GaB-tk-zoe" secondAttribute="trailing" id="Fdw-bS-rSB"/>
+                            <constraint firstAttribute="bottom" secondItem="GaB-tk-zoe" secondAttribute="bottom" id="VFM-bw-TDu"/>
+                            <constraint firstAttribute="height" constant="60" id="v9T-x4-569"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZRK-pE-9k0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6Jz-Iq-Hfq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ZRK-pE-9k0" secondAttribute="trailing" constant="10" id="A4e-o4-3Cb"/>
+                    <constraint firstItem="ZRK-pE-9k0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NHS-On-Bl0"/>
+                    <constraint firstAttribute="trailing" secondItem="ZRK-pE-9k0" secondAttribute="trailing" constant="10" id="VFc-fl-6K7"/>
+                    <constraint firstItem="ZRK-pE-9k0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dyg-Up-zZZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZRK-pE-9k0" secondAttribute="bottom" constant="10" id="hJ1-fm-8Y5"/>
+                    <constraint firstItem="ZRK-pE-9k0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="oWt-YG-Gi5"/>
+                    <constraint firstItem="ZRK-pE-9k0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="omU-gr-2dA"/>
+                    <constraint firstItem="ZRK-pE-9k0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="osQ-e1-9fq"/>
+                    <constraint firstAttribute="bottom" secondItem="ZRK-pE-9k0" secondAttribute="bottom" constant="10" id="uci-c1-Pk8"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="A4e-o4-3Cb"/>
+                        <exclude reference="NHS-On-Bl0"/>
+                        <exclude reference="dyg-Up-zZZ"/>
+                        <exclude reference="hJ1-fm-8Y5"/>
+                        <exclude reference="oWt-YG-Gi5"/>
+                        <exclude reference="omU-gr-2dA"/>
+                        <exclude reference="uci-c1-Pk8"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="date" destination="lFZ-Vy-He7" id="La1-ZT-VjU"/>
+                <outlet property="img" destination="Hzi-Pr-i8Y" id="hwF-Jn-Vez"/>
+                <outlet property="title" destination="ReX-OS-gvL" id="aJ6-WH-kfS"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

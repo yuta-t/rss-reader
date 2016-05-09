@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012976FB1CE06AC600DA665E /* ArticleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012976F91CE06AC600DA665E /* ArticleListTableViewCell.swift */; };
+		012976FC1CE06AC600DA665E /* ArticleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012976FA1CE06AC600DA665E /* ArticleListTableViewCell.xib */; };
 		012D2B021CDB114600B44FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D2B011CDB114600B44FA6 /* AppDelegate.swift */; };
 		012D2B091CDB114600B44FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012D2B081CDB114600B44FA6 /* Assets.xcassets */; };
 		012D2B0C1CDB114600B44FA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D2B0A1CDB114600B44FA6 /* LaunchScreen.storyboard */; };
@@ -58,6 +60,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		012976F91CE06AC600DA665E /* ArticleListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewCell.swift; sourceTree = "<group>"; };
+		012976FA1CE06AC600DA665E /* ArticleListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleListTableViewCell.xib; sourceTree = "<group>"; };
 		012D2AFE1CDB114600B44FA6 /* rss-reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rss-reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		012D2B011CDB114600B44FA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012D2B081CDB114600B44FA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 				012D2B2F1CDB14DC00B44FA6 /* ArticleListViewController.swift */,
 				012D2B341CDB155D00B44FA6 /* ArticleListView.swift */,
 				012D2B431CDB396B00B44FA6 /* ArticleListViewModel.swift */,
+				012976FA1CE06AC600DA665E /* ArticleListTableViewCell.xib */,
+				012976F91CE06AC600DA665E /* ArticleListTableViewCell.swift */,
 			);
 			name = ArticleList;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				012D2B0C1CDB114600B44FA6 /* LaunchScreen.storyboard in Resources */,
+				012976FC1CE06AC600DA665E /* ArticleListTableViewCell.xib in Resources */,
 				012D2B091CDB114600B44FA6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012976FB1CE06AC600DA665E /* ArticleListTableViewCell.swift in Sources */,
 				0173DF931CDDEB9700C5A584 /* NSDate+Extension.swift in Sources */,
 				012D2B381CDB26AE00B44FA6 /* Article.swift in Sources */,
 				012D2B021CDB114600B44FA6 /* AppDelegate.swift in Sources */,
