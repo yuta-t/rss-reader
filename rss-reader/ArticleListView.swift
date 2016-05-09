@@ -16,6 +16,9 @@ class ArticleListView: UIView {
         table = UITableView()
         refreshControl = UIRefreshControl()
         
+        table.registerNib(UINib(nibName: "ArticleListTableViewCell", bundle: nil),
+                          forCellReuseIdentifier: "ArticleListTableViewCell")
+        
         super.init(frame: CGRectZero)
         addSubview(table)
         table.addSubview(refreshControl)
