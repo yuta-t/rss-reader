@@ -11,8 +11,20 @@ import Bond
 
 class ArticleListViewModel: NSObject {
     var articles: ObservableArray<ObservableArray<Article>> = []
+    let proxy = NoAnimationTableViewProxy()
 
     func loadArticles() {
+        articles.removeAll()
         articles.append(Article.getFromJin())
+    }
+}
+
+class NoAnimationTableViewProxy: BNDTableViewProxyDataSource {
+    @objc func tableView(tableView: UITableView, animationForRowInSections sections: Set<Int>) -> UITableViewRowAnimation {
+        return .Fade
+    }
+    
+    @objc func tableView(tableView: UITableView, animationForRowAtIndexPaths indexPaths: [NSIndexPath]) -> UITableViewRowAnimation {
+        return .None
     }
 }
