@@ -54,8 +54,6 @@ extension XMLElement {
         
         let html = try? HTMLDocument(string: content.stringValue, encoding: NSUTF8StringEncoding)
         
-        print(html?.firstChild(xpath: "//body/div/img")?.attr("src"))
-        
         return html?.firstChild(xpath: "//body/div/img")?.attr("src")
     }
 }
