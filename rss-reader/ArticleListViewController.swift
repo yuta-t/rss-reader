@@ -10,8 +10,23 @@ import UIKit
 import Bond
 import Kingfisher
 
+
+enum Source {
+    struct Item {
+    }
+    
+    case Item(Item)
+}
+
+let items: ObservableArray<Source> = {
+   [Source.Item(Item())]
+}()
+
 class ArticleListViewController: UIViewController, UITableViewDelegate {
     let vm = ArticleListViewModel()
+    var dataSource: ObservableArray<ObservableArray<Source>> = {
+        [items]
+    }()
     
     override func loadView() {
         super.loadView()

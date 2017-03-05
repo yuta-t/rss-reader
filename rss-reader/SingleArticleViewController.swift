@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import WebKit
 
-class SingleArticleViewController: UIViewController {
+class SingleArticleViewController: UIViewController, WKNavigationDelegate {
     let vm: SingleArticleViewModel
     
     init(article: Article) {
@@ -28,7 +29,13 @@ class SingleArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let view = self.view as! SingleArticleView
+        view.webView.navigationDelegate = self
         title = vm.article.title
         view.webView.loadRequest(NSURLRequest(URL: NSURL(string: vm.article.url)!))
+    }
+    
+    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+        print("finish")
+        title = webView.title
     }
 }
